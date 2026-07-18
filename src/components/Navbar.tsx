@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 
 const navLinks = [
     { id: "/#about", title: "About" },
@@ -8,14 +8,12 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-    // const [mobileOpen, setMobileOpen] = useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
         <>
             <div className='flex-center w-full fixed p-2 z-50'>
                 <div data-aos="fade-up" className="frosted-bg navbar w-11/12 md:w-2/3">
-
-                    {/* Logo */}
                     <div className="flex-center gap-2 font-bold text-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
@@ -34,9 +32,44 @@ const Navbar = () => {
                             <a href={link.id} key={link.id} className="cursor-pointer">{link.title}</a>
                         ))}
                     </nav>
+
+                    {/* Hamburger — mobile only */}
+                    <button
+                        onClick={() => setMobileOpen(!mobileOpen)}
+                        className="md:hidden p-2 rounded-full text-gray hover:text-primary duration-300 z-5 cursor-pointer hover:bg-light "
+                        aria-label="Toggle menu"
+                    >
+                        {mobileOpen ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" className="cursor-pointer"
+                                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                                <path d="M18 6 6 18M6 6l12 12" />
+                            </svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" className="cursor-pointer"
+                                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                                <path d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        )}
+                    </button>
+                         {/* Mobile menu */}
+            {mobileOpen && (
+                <div className="md:hidden absolute top-16 left-1/2 -translate-x-1/2 
+                w-11/12 bg-navbar rounded-2xl  flex flex-col gap-4 bg-light font-semibold text-gray 
+                shadow-lg">
+                    {navLinks.map((link,i) => (
+                        <a
+                            key={`${link}${i} mobile`}
+                            href={link.id}
+                            onClick={() => setMobileOpen(false)}
+                            className={`${i==0 ? "rounded-t-2xl" : ""} ${i==navLinks.length-1 ? "rounded-b-2xl" : ""} cursor-pointer text-lg text-dark px-6 py-4 hover:bg-dark hover:text-light`}
+                        >
+                            {link.title}
+                        </a>
+                    ))}
+                </div>
+            )}
                 </div>
             </div>
-
 
         </>
     );
