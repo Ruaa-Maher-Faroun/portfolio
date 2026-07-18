@@ -28,8 +28,6 @@ const Index = () => {
                 </VideoLayout>
             ))}
       
-         <HeroSection />
-         <AboutSection />
             {LayoutSections.map((section) => (
                 <Layout isFrosted={section.isFrosted} id={section.id}>
                     {section.section}
