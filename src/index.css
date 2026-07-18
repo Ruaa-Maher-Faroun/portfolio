@@ -4,16 +4,16 @@
 
 
 
-@font-face {
+/* @font-face {
   font-family: 'gebuk';
   src: url('./assets/gebuk-font/gebuk-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
+} */
 @font-face {
-  font-family: 'Gebuk';
-  src: url('/fonts/gebuk-font/gebuk-Regular.otf') format('opentype');
+  font-family: 'gebuk';
+  src: url('../public/fonts/gebuk-font/gebuk-regular.otf') format('opentype');
   font-display: swap;
 }
 
