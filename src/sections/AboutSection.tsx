@@ -1,5 +1,4 @@
 import { services } from '../data/data';
-import VideoLayout from '../layout/VideoLayout';
 
 const AboutSection = () => {
   return (
