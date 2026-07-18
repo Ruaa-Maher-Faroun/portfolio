@@ -16,7 +16,7 @@ how to weave AI features into everyday tools.
 properly: live demos, real READMEs, the unglamorous polish.
 
 📫 **Find me**
-[Portfolio](https://ruaa-faroun-portfolio-9vyj.onrender.com/) · [LinkedIn](https://www.linkedin.com/in/rua-faroun/) · [Email](mailto:ruaafaroun@gmail.com)
+[Portfolio](https://ruaa-faroun-portfolio-9vyj.onrender.com/) · [LinkedIn](https://www.linkedin.com/in/rua-faroun/) · Email: ruaafaroun@gmail.com
 
 ---
 *Computer engineering grad · West Bank 🇵🇸 · open to remote frontend roles, worldwide*
