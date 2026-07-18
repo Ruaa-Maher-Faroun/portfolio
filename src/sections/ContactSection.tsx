@@ -4,11 +4,11 @@ const ContactSection = () => {
     <>
       <div className="text-center tracking-wider">
         <span className='mb-2 font-semibold'>Get in Touch</span>
-        <h1 className="font-title title gradient-text">
+        <h1 className="font-title  title gradient-text">
           CONTACT
         </h1>
       </div>
-      <p className='tracking-wide font-semibold'>Interested in working together? I'm always open to discussing new projects and opportunities.
+      <p className='tracking-wide lg:text-left text-center font-semibold'>Interested in working together? I'm always open to discussing new projects and opportunities.
       </p>
       <div className="contact-details w-full flexCol flex-center gap-2">
         {contactArr.map((contact) => (
@@ -17,7 +17,7 @@ const ContactSection = () => {
               <div className="icon">
                 <div dangerouslySetInnerHTML={{ __html: contact.icon }} />
               </div>
-              <div className="flexCol text-slate-300">
+              <div className="hidden md:flex md:text-sm lg:text-base flexCol text-slate-300">
                 <span>{contact.contactType}</span>
                 <span>{contact.value}</span>
               </div>

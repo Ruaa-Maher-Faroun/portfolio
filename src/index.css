@@ -144,14 +144,41 @@
     transform: rotate(360deg);
   }
 }
+
+
+.pause-animate:hover {
+  animation-play-state: paused;
+}
+
+
 @theme {
   --animate-loader: loader-animate 5s linear infinite;
+  --animate-swiper: swiper 35s linear infinite;
+  --animate-horizontal-swiper: swiperHorizontal 12s linear infinite;
   --font-title: 'gebuk', sans-serif;
   --font-primary: Inter, sans-serif;
   --color-dark: #220446;
   --color-light: #fa94df;
   /* --color-navbar: rgba(133, 62, 145,.8);; */
   /* --color-primary:#220446; */
+@keyframes swiper {
+  0% {
+    transform: translateY(-50%)
+  }
+
+  100% {
+    transform: translateY(0%)
+  }
+}
+@keyframes swiperHorizontal {
+  0% {
+    transform: translateX(0%)
+  }
+
+  100% {
+    transform: translateX(-50%)
+  }
+}
 
 }
 
@@ -184,24 +211,6 @@
   }
 }
 
-@keyframes swiper {
-  0% {
-    transform: translateY(-50%)
-  }
-
-  100% {
-    transform: translateY(0%)
-  }
-}
-
-.swiper-animate {
-  animation: swiper 35s linear infinite;
-}
-
-.pause-animate:hover {
-  animation-play-state: paused;
-}
-
 
 
   .object-ratio {
@@ -232,7 +241,7 @@
     }
 
     .title {
-      @apply font-bold text-xl md:text-4xl lg:text-6xl xl:text-8xl text-center tracking-wider;
+      @apply font-bold text-[2.3rem] md:text-4xl lg:text-6xl xl:text-8xl text-center tracking-wider;
 
     }
 

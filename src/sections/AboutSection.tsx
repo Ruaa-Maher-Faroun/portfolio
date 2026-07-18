@@ -4,8 +4,8 @@ const AboutSection = () => {
   return (
     <>
 
-      <div className="flex-center gap-20 flex-col md:flex-row  ">
-        <div className="w-1/3 p-5">
+      <div className="flex-center gap:10 md:gap-20 flex-col md:flex-row  ">
+        <div className="w-2/3 md:w-1/3 p-5">
           <img src="/profile-photo.jpg" alt="profile photo" className=" rounded-full border-dark border hover:border-3 hover:border-light hover:shadow-lg hover:shadow-light hover:scale-105 duration-500" />
         </div>
         <div className="w-2/3 tracking-wider">
