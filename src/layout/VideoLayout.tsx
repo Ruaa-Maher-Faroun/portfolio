@@ -1,11 +1,12 @@
-import type { ReactNode } from "react"
+import type { Dispatch, ReactNode, SetStateAction } from "react"
 
-const VideoLayout = ({children,id}:{children:ReactNode,id:string}) => {
+const VideoLayout = ({children,id,setReady}:{children:ReactNode,id:string,setReady:Dispatch<SetStateAction<boolean>>;}) => {
+    
     return (
             <section className="overflow-hidden max-w-screen min-h-screen relative pb-20" id={id}>
                 {/* Background video */}
                 <video 
-                // data-aos="fade-up"
+               onCanPlayThrough={() => setReady(true)}
                     autoPlay
                     loop
                     muted

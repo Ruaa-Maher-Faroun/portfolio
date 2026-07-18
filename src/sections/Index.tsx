@@ -7,6 +7,8 @@ import ContactSection from './ContactSection'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import VideoLayout from '../layout/VideoLayout';
+import { useState } from 'react'
+import Loader from '../components/Loader'
 
 const VideoLayoutSections = [
     { section: <HeroSection />, id: "home" },
@@ -19,11 +21,13 @@ const LayoutSections = [
     { section: <ContactSection />, id: "contact", isFrosted: true },
 ]
 const Index = () => {
+    const [ready, setReady] = useState(false);
     return (
         <>
+         {!ready && <Loader />}
         <Navbar />
             {VideoLayoutSections.map((section) => (
-                <VideoLayout id={section.id}>
+                <VideoLayout id={section.id} setReady={setReady}>
                     {section.section}
                 </VideoLayout>
             ))}

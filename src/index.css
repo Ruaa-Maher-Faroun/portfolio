@@ -130,8 +130,17 @@
 .active {
   color: rgb(133, 62, 145);
 }
+@keyframes loader-animate {
+  0% {
+    transform: rotate(0deg);
+  }
 
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @theme {
+  --animate-loader: loader-animate 5s linear infinite;
   --font-title: 'gebuk', sans-serif;
   --font-primary: Inter, sans-serif;
   --color-dark: #220446;
@@ -144,102 +153,118 @@
 @layer base {
 
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  cursor: default;
-}
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+  }
 
-*::selection{
-  background-color: #853e91 ;
-  color:#f59ce1; ;
-}
+  *::selection {
+    background-color: #853e91;
+    color: #f59ce1;
+    ;
+  }
 
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: auto;
-  scrollbar-color: #853e91 #f9d4f1;
-}
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: auto;
+    scrollbar-color: #853e91 #f9d4f1;
+  }
+
   body {
     /* font-size: 5rem; */
     color: #220446;
 
   }
 }
-@keyframes swiper{
-  0%{
+
+@keyframes swiper {
+  0% {
     transform: translateY(-50%)
   }
-  100%{
+
+  100% {
     transform: translateY(0%)
-
   }
 }
- .swiper-animate{
-  animation:swiper 35s linear infinite;
-}
-.pause-animate:hover{
-  animation-play-state:paused;
+
+.swiper-animate {
+  animation: swiper 35s linear infinite;
 }
 
-.object-ratio{
-  height:100%;
-  aspect-ratio:16 / 9;
-  object-fit: cover;
+.pause-animate:hover {
+  animation-play-state: paused;
 }
-@layer components {
-  .main-container{
-    @apply h-2/3 w-3/4 rounded-2xl  border border-slate-200 bg-slate-200  p-5 space-y-6;
+
+
+
+  .object-ratio {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  @layer components {
+    .main-container {
+      @apply h-2/3 w-3/4 rounded-2xl border border-slate-200 bg-slate-200 p-5 space-y-6;
     }
+
     .navbar {
-    @apply tracking-wide w-11/12 md:w-2/3 flex justify-between rounded-4xl items-center px-6 md:px-14 h-16  text-dark;
-  }
+      @apply tracking-wide w-11/12 md:w-2/3 flex justify-between rounded-4xl items-center px-6 md:px-14 h-16 text-dark;
+    }
 
-  .flexCol{
-    @apply flex flex-col;
-  }
-  .flex-center{
-    @apply flex items-center justify-center;
-  }
-  .gradient-text {
-    @apply bg-gradient-to-r to-dark from-light bg-clip-text text-transparent text-shadow-lg ;
-  }
+    .flexCol {
+      @apply flex flex-col;
+    }
 
-  .title{
-    @apply font-bold text-xl md:text-4xl lg:text-6xl xl:text-8xl text-center tracking-wider ; 
+    .flex-center {
+      @apply flex items-center justify-center;
+    }
 
-  }
-  .paragraphs {
-    @apply text-center w-1/2 text-xl
-  }
+    .gradient-text {
+      @apply bg-gradient-to-r to-dark from-light bg-clip-text text-transparent text-shadow-lg;
+    }
 
-  .btns {
-    @apply px-6 py-3 rounded-2xl text-slate-300 text-base cursor-pointer shadow-sm active:translate-y-1 font-semibold tracking-wider  hover:brightness-200 duration-500;
-  }
+    .title {
+      @apply font-bold text-xl md:text-4xl lg:text-6xl xl:text-8xl text-center tracking-wider;
 
-  .primary-btn {
-    @apply  bg-dark ;
-  }
+    }
 
-  .secondary-btn {
-    @apply  bg-[#853e91] ml-5 ;
-  }
+    .paragraphs {
+      @apply text-center w-1/2 text-xl
+    }
 
-  .contact-div {
-    @apply  bg-[#93649c] text-slate-200 px-5 border duration-500 border-slate-400 rounded-lg hover:border-light hover:translate-x-1 w-1/2 h-20 flex justify-between;
-  }
-  .icon{
-    @apply text-light;
-  }
-  .about-card{
-    @apply  bg-dark text-slate-200 text-center duration-500 border-slate-400 h-38 px-5 py-6 rounded-lg border-2 flex ;
+    .btns {
+      @apply px-6 py-3 rounded-2xl text-slate-300 text-base cursor-pointer shadow-sm active:translate-y-1 font-semibold tracking-wider hover:brightness-200 duration-500;
+    }
 
+    .primary-btn {
+      @apply bg-dark;
+    }
+
+    .secondary-btn {
+      @apply bg-[#853e91] ml-5;
+    }
+
+    .contact-div {
+      @apply bg-[#93649c] text-slate-200 px-5 border duration-500 border-slate-400 rounded-lg hover:border-light hover:translate-x-1 w-1/2 h-20 flex justify-between;
+    }
+
+    .icon {
+      @apply text-light;
+    }
+
+    .about-card {
+      @apply bg-dark text-slate-200 text-center duration-500 border-slate-400 h-38 px-5 py-6 rounded-lg border-2 flex;
+
+    }
+
+    .about-card:hover .icon {
+      @apply text-[#da06ff] text-lg rotate-20 scale-120 duration-700
+    }
+
+    .about-card:hover {
+      @apply border-[#853e91] -translate-y-2
+    }
   }
-  .about-card:hover .icon{
-    @apply text-[#da06ff] text-lg rotate-20 scale-120 duration-700
-  }
-  .about-card:hover {
-    @apply border-[#853e91] -translate-y-2
-  }
-}
