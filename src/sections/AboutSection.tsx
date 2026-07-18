@@ -1,10 +1,10 @@
-import {services} from '../data/data';
+import { services } from '../data/data';
 import VideoLayout from '../layout/VideoLayout';
 
 const AboutSection = () => {
   return (
-    <VideoLayout id={"about"}>
-    
+    <>
+
       <div className="flex-center gap-20 flex-col md:flex-row  ">
         <div className="w-1/3 p-5">
           <img src="/profile-photo.jpg" alt="profile photo" className=" rounded-full border-dark border hover:border-3 hover:border-light hover:shadow-lg hover:shadow-light hover:scale-105 duration-500" />
@@ -18,7 +18,7 @@ const AboutSection = () => {
             I'm Rua'a Faroun — a frontend developer who cares about the details. I build responsive, interactive interfaces with React, Next.js, and TypeScript, and I enjoy the part where a design goes from static mockup to something that feels alive in the browser.
 
 
-            </p>
+          </p>
         </div>
       </div>
       <div className="mt-10 w-full flexCol md:flex-row flex-center gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
@@ -40,7 +40,7 @@ const AboutSection = () => {
 
         ))}
       </div>
-    </VideoLayout>
+    </>
   )
 }
 

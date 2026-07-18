@@ -6,9 +6,14 @@ import ProjectsSection from './ProjectsSection'
 import ContactSection from './ContactSection'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-const sections = [
-    // { section: <HeroSection />, id: "home", isFrosted: false },
-    // { section: <AboutSection />, id: "about", isFrosted: false },
+import VideoLayout from '../layout/VideoLayout';
+
+const VideoLayoutSections = [
+    { section: <HeroSection />, id: "home" },
+    { section: <AboutSection />, id: "about" },
+
+]
+const LayoutSections = [
     { section: <SkillsSection />, id: "skills", isFrosted: false },
     { section: <ProjectsSection />, id: "projects", isFrosted: false },
     { section: <ContactSection />, id: "contact", isFrosted: true },
@@ -17,15 +22,19 @@ const Index = () => {
     return (
         <>
         <Navbar />
+            {VideoLayoutSections.map((section) => (
+                <VideoLayout id={section.id}>
+                    {section.section}
+                </VideoLayout>
+            ))}
+      
          <HeroSection />
          <AboutSection />
-            {sections.map((section) => (
+            {LayoutSections.map((section) => (
                 <Layout isFrosted={section.isFrosted} id={section.id}>
                     {section.section}
                 </Layout>
-
-            ))
-            }
+            ))}
             <Footer />
         </>
     )

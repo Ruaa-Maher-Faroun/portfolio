@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Footer = () => {
     return (
@@ -16,7 +16,6 @@ const Footer = () => {
                 </div>
             </div>
             <div className="right">
-
                 Built with React, TypeScript & Tailwind CSS
             </div>
         </div>
