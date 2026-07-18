@@ -8,7 +8,7 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-    const [mobileOpen, setMobileOpen] = useState(false);
+    // const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
         <>
