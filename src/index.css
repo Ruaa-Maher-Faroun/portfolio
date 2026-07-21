@@ -250,7 +250,7 @@
     }
 
     .btns {
-      @apply px-6 py-3 rounded-2xl text-slate-300 text-base cursor-pointer shadow-sm active:translate-y-1 font-semibold tracking-wider hover:brightness-200 duration-500;
+      @apply text-sm md:text-base md:w-20 text-center w-20 px-3 py-3 rounded-2xl text-slate-300 text-base cursor-pointer shadow-sm active:translate-y-1 font-semibold tracking-wider hover:brightness-200 duration-500;
     }
 
     .primary-btn {
@@ -258,7 +258,7 @@
     }
 
     .secondary-btn {
-      @apply bg-[#853e91] ml-5;
+      @apply bg-[#853e91] lg:ml-5;
     }
 
     .contact-div {

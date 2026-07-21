@@ -17,11 +17,11 @@ const ProjectsSection = () => {
             border border-white/80 backdrop-blur-4xl flex flex-col md:flex-row items-center rounded-2xl trackking-wider `}>
             <img src={project.image} alt="" className="rounded-xl object-cover object-ratio  w-full md:w-1/2" />
             <div className="flexCol space-y-6 max-w-full">
-              <h3 className="font-bold  text-xl mb-2 tracking-wider "> {project.title}</h3>
+              <h3 className="font-bold  text-xl mb-2 tracking-wider text-center md:text-left"> {project.title}</h3>
               <p className={`${i %2 == 0 ? "text-white" : "text-slate-800"} text-sm  tracking-wider`}>{project.tectStack.join(" | ")}</p>
-              <div className="flex-center self-start justify-start gap-3 lg:justify-center w-full">
-                <a target="_blank" href={project.liveDemo} className={`primary-btn btns md:py-2 md:px-3 w-25  md:w-20 text-center`}>Demo</a>
-                <a target="_blank" href={project.github} className={`btns  secondary-btn md:ml-0 md:py-2 md:px-3 w-25 md:w-20 text-center`}>Github</a>
+              <div className="flex-center lg:self-start md:justify-start gap-3 lg:justify-center w-full">
+                <a target="_blank" href={project.liveDemo} className={`primary-btn btns  flex-center `}>Demo</a>
+                <a target="_blank" href={project.github} className={`btns flex-center secondary-btn ml-0 md:py-2 md:px-3  `}>Github</a>
               </div>
             </div>
           </div>
