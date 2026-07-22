@@ -7,7 +7,7 @@ const HeroSection = () => {
             <h1 className='  md:text-4xl  xl:text-8xl font-title text-4xl sm:text-6xl gradient-text
                     lg:text-8xl font-bold '>Hi, I'm Rua'a         </h1>
                 <p className='paragraphs w-full mt-10  text-shadow-2xl'>
-                a frontend/full-stack developer specializing in React, TypeScript, and Next.js. I build production-grade interfaces — from interactive 3D experiences to full e-commerce platforms.
+                a frontend/full-stack developer specializing in React, TypeScript, and Next.js. I build production-grade interfaces — from interactive  experiences to full e-commerce platforms.
             </p>
             <div className="socials flex justify-center mt-12 w-full relative gap-5 z-2">
                 {contactArr.map((social) => (
