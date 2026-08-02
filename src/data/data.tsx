@@ -66,17 +66,22 @@ export const projects = [
     tags:['Responsive', 'Bootstrap','Frontend']
     ,image:ecommercee,liveDemo:"https://ruaa-maher-faroun.github.io/FinalProject-Ecommerce-KA/",github:"https://github.com/Ruaa-Maher-Faroun/FinalProject-Ecommerce-KA"},
   
-  {title:"AI Revolution",tectStack:['React','Tailwind CSS' ,'TypeScript'],
-    tags:['Responsive', 'React Vite']
-    ,image:netflix,liveDemo:"https://ai-revolution-landingpage.netlify.app/",github:"https://github.com/Ruaa-Maher-Faroun/ai-revolution"},
-  
-  
-    {title:"Netflix Clone",tectStack:['HTML & CSS','React'],
-    tags:['CRUD', 'Clone','Frontend','React'],
-    image:CRUDAPP,liveDemo:"https://nfx-xln-roaafaroun.netlify.app/",github:"https://github.com/Ruaa-Maher-Faroun/Netflix-Clone"},
-  
-  
-    {title:"CRUD APP",tectStack:['JavaScript','Bootstrap','HTML & CSS'],
-    tags:['Responsive', 'CRUD','Frontend'],image:aiRevolution,
-    liveDemo:"https://ruaa-maher-faroun.github.io/CRUDApp/",github:"https://github.com/Ruaa-Maher-Faroun/CRUDApp"},
+    {
+      title:"Netflix Clone",
+      tags:['CRUD', 'Clone','Frontend','React'],
+      tectStack:['HTML & CSS','React'],
+      image:netflix,
+      liveDemo:"https://nfx-xln-roaafaroun.netlify.app/",github:"https://github.com/Ruaa-Maher-Faroun/Netflix-Clone"},
+      
+      
+      {title:"AI Revolution",
+        tectStack:['React','Tailwind CSS' ,'TypeScript']
+        ,image:aiRevolution,
+        tags:['Responsive', 'React Vite']
+        ,liveDemo:"https://ai-revolution-landingpage.netlify.app/",github:"https://github.com/Ruaa-Maher-Faroun/ai-revolution"}
+        ,
+        {title:"CRUD APP",tectStack:['JavaScript','Bootstrap','HTML & CSS'],
+          tags:['Responsive', 'CRUD','Frontend']
+          ,  image:CRUDAPP,
+    liveDemo:"https://ruaa-maher-faroun.github.io/CRUDApp/" ,github:"https://github.com/Ruaa-Maher-Faroun/CRUDApp"}
 ];
